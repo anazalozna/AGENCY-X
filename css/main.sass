@@ -1,0 +1,374 @@
+$white: #fff
+$red: #ff5e4a
+
+*
+  vertical-align: top
+
+.hide
+  display: none
+
+body
+  font-family: 'Ubuntu', sans-serif
+  font-weight: 300
+  background-color: $white
+  color: #5d4e32
+  font-size: 1.1em
+  position: relative
+  padding: 0
+  margin: 0
+
+h1, h2, h3, h4, h5, h6
+  margin: 0
+
+.transition
+  transition: all .3s ease-in
+
+a
+  @extend .transition
+  color: #b9b6b0
+  display: inline-block
+  text-decoration: none
+
+a:hover
+  color: #8e8a82
+
+i.fa
+  font-size: 1.6em
+
+img
+  max-width: 100%
+
+ul
+  padding: 0
+  margin: 0
+  list-style: none
+
+.padded_Y
+  padding:
+    top: 40px
+    bottom: 40px
+
+.margin_right
+  margin-right: 10px
+
+.margin_left
+  margin-left: 10px
+
+.wrapper
+  max-width: 1200px
+  width: 95%
+  margin: 0 auto
+  position: relative
+
+.wrapper_small
+  @extend .wrapper
+  max-width: 800px
+
+.flex_box
+  display: flex
+  flex-direction: row
+  flex-wrap: nowrap
+  justify-content: space-between
+  align-items: center
+  align-content: stretch
+
+.full_width
+  width: 100%
+
+.full_height
+  height: 100%
+
+.absolute
+  content: ""
+  position: absolute
+
+.top
+  top: 0
+
+.left
+  left: 0
+
+.right
+  right: 0
+
+.bottom
+  bottom: 0
+
+.center
+  text-align: center
+
+.title_h2
+  font-family: 'Lobster', cursive
+  font-size: 2.3em
+  color: $red
+
+.header
+  background-color: $white
+
+.top_panel
+  @extend .flex_box
+  padding: 20px 0
+
+  .flex_box
+    .contacts_h a:not(:last-child)
+      @extend .margin_right
+    .socials_h a:not(:first-child)
+      @extend .margin_left
+
+.banner_h
+  @extend .padded_Y
+  @extend .center
+  background-size: cover
+  position: relative
+  background: url(../img/bg_banner_h.jpg) 50% no-repeat
+  overflow: hidden
+
+.banner_h:before
+  @extend .absolute
+  @extend .top
+  @extend .left
+  @extend .full_width
+  @extend .full_height
+  background-color: rgba(0, 0, 0, 0.6)
+  //z-index: 1
+
+.logo_h img
+  margin: 50px 0
+  width: 25em
+
+.nav_h
+  font-family: 'Lobster', cursive
+  padding-bottom: 20px
+
+.nav_h ul li
+  display: inline-block
+  width: 180px
+  position: relative
+
+.nav_h ul li:hover:before
+  @extend .absolute
+  @extend .top
+  @extend .left
+  @extend .full_width
+  @extend .full_height
+  top: 100%
+  margin-top: 10px
+  background: url(../img/menu_hover.svg) no-repeat
+
+.nav_h ul li a
+  color: $white
+  font-size: 2em
+
+.nav_h ul li a:hover
+  color: $red
+
+.welcome_block
+  @extend .padded_Y
+  @extend .center
+  background-color: #ffd68b
+
+  p
+    font-size: 1.1em
+
+.btn_more
+  padding: 15px
+  border: 1px solid $red
+  color: $red
+  border-radius: 5px
+  text-transform: uppercase
+
+.btn_more:hover
+  background-color: $red
+  color: $white
+
+.promo_flex
+  @extend .flex_box
+  @extend .padded_Y
+  justify-content: space-around
+
+  .flex_item
+    @extend .center
+    padding: 0 10px
+    width: 100%
+
+.promo_img
+  width: 200px
+  height: 200px
+  margin-bottom: -70px
+  overflow: hidden
+  border-radius: 200px
+  margin-left: auto
+  margin-right: auto
+
+  img
+    box-shadow: 0 0 5px #5d4e32
+
+.slider_main
+  background: url(../img/bg_slider.jpg) 60% 50% no-repeat
+  background-size: cover
+  @extend .padded_Y
+  position: relative
+  @extend .center
+  color: $white
+
+  .all_slides
+    overflow: hidden
+    height: 250px
+
+    .slide
+      @extend .padded_Y
+      height: 250px
+
+      .slide_content
+        @extend .padded_Y
+
+        h3
+          margin-top: 10px
+          font-size: 2.1em
+          font-weight: 400
+
+  .slider_arrow
+    font-size: 2em
+    opacity: .3
+    color: $white
+    @extend .absolute
+    top: 50%
+
+  .slider_arrow:hover
+    opacity: 1
+
+  #prev_slide
+    @extend .left
+    padding-left: 20px
+
+  #next_slide
+    @extend .right
+    padding-right: 20px
+
+.slider_main:before
+  @extend .absolute
+  @extend .top
+  @extend .left
+  @extend .full_width
+  @extend .full_height
+  background-color: rgba(0,0,0,.8)
+
+.footer
+  @extend .padded_Y
+  background-color: $white
+
+  .logo_f
+    width: 11em
+
+  .flex_f
+    @extend .flex_box
+    align-items: flex-start
+    justify-content: space-around
+
+    .flex_item
+      font-size: .8em
+
+      .title_h2
+        font-size: 1.5em
+        margin-bottom: 20px
+
+      .socials_f a
+        font-size: 1.3em
+        padding-left: 10px
+
+.team_main
+  @extend .welcome_block
+  position: relative
+  overflow: hidden
+
+  .team_flex
+    @extend .flex_box
+    justify-content: space-around
+
+    .flex_item
+      z-index: 999
+      margin: 10px 0
+
+      img
+        max-height: 15em
+
+      h3
+        color: $red
+        font-family: 'Lobster', cursive
+        margin: 10px 0
+
+      p
+        padding: 20px
+        margin: 0 20px
+        background-color: rgba(0,0,0,.5)
+        color: $white
+
+.team_main:before
+  @extend .absolute
+  top: -77%
+  left: -55%
+  background: $white
+  height: 155%
+  width: 169%
+  transform: rotate(-13deg)
+
+.hiring_block
+  @extend .padded_Y
+  background: url(../img/bg_team.jpg) 50% no-repeat
+  background-size: cover
+  position: relative
+  @extend .center
+  color: $white
+
+.hiring_block:before
+  @extend .absolute
+  @extend .top
+  @extend .left
+  @extend .full_width
+  @extend .full_height
+  background-color: rgba(0,0,0,.6)
+
+.menu_main
+  @extend .welcome_block
+  padding-top: 20px
+  padding-bottom: 0
+
+.menu_content
+  @extend .padded_Y
+  @extend .flex_box
+  flex-wrap: wrap
+  align-items: baseline
+
+  .flex_item
+    width: 30%
+    padding: 10px
+    position: relative
+
+    .title_h2
+      color: $white
+      font-size: 1.8em
+      letter-spacing: 5px
+
+  .flex_item:hover .menu_img
+   transform: scale(1.1)
+
+.menu_block
+  background: url(../img/bg_menu.jpg) 50% no-repeat
+  background-size: cover
+  position: relative
+  margin-top: 20px
+
+.menu_block:before
+  @extend .absolute
+  @extend .top
+  @extend .left
+  @extend .full_width
+  @extend .full_height
+  background-color: rgba(0,0,0,.6)
+
+.menu_img
+  @extend .promo_img
+  @extend .transition
+  margin-bottom: -45px
+
+@import "responsive"
