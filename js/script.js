@@ -71,4 +71,6 @@
     [].forEach.call(links, function(link){
         link.addEventListener("click", function(e){changeContent(e, this);}, false);
     });
+
+    links[0].click();
 })();
